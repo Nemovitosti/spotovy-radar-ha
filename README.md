@@ -63,3 +63,15 @@ nebo chybná predikce nic neohrozily.
 **English:** Czech electricity prices (OTE day-ahead) in 15-minute intervals plus a 72-hour
 forecast from [spotovyradar.cz](https://spotovyradar.cz). Requires an API key (Smart Home plan).
 Install via HACS as a custom repository, then add the integration in Settings → Devices & services.
+
+## Vývoj
+
+Testy běží proti skutečnému jádru Home Assistantu s napodobeným API
+(`pytest-homeassistant-custom-component`, Python 3.14):
+
+```bash
+uv venv && uv pip install -r requirements_test.txt
+uv run --no-project pytest
+```
+
+GitHub Actions je spouští při každém pushi spolu s kontrolami hassfest a HACS.
