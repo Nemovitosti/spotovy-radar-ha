@@ -6,10 +6,9 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 
 import pytest
+from custom_components.spotovy_radar.const import DOMAIN
 from homeassistant.const import CONF_API_KEY
 from pytest_homeassistant_custom_component.common import MockConfigEntry
-
-from custom_components.spotovy_radar.const import DOMAIN
 
 API_URL = "https://spotovyradar.cz/api/v1/forecast"
 API_KEY = "sr_live_abcdefgh_" + "A" * 43

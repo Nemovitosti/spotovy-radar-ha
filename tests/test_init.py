@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 import pytest
+from custom_components.spotovy_radar.const import DOMAIN, UPDATE_INTERVAL
 from freezegun.api import FrozenDateTimeFactory
 from homeassistant.config_entries import SOURCE_REAUTH, ConfigEntryState
 from homeassistant.const import STATE_OFF, STATE_ON, STATE_UNAVAILABLE
@@ -15,8 +16,6 @@ from pytest_homeassistant_custom_component.common import (
     async_fire_time_changed,
 )
 from pytest_homeassistant_custom_component.test_util.aiohttp import AiohttpClientMocker
-
-from custom_components.spotovy_radar.const import DOMAIN, UPDATE_INTERVAL
 
 from .conftest import API_URL, NOW, forecast_body
 
