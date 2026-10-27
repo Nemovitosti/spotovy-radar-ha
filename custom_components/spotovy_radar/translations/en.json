@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotový Radar",
+        "description": "Paste the API key from {account_url} (Smart Home plan).",
+        "data": {
+          "api_key": "API key"
+        },
+        "data_description": {
+          "api_key": "Starts with sr_live_. It is shown only once when created."
+        }
+      },
+      "reauth_confirm": {
+        "title": "New API key",
+        "description": "The API key no longer works. Create a new one at {account_url} and paste it here.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_format": "The key must look like sr_live_…, copy it again in full.",
+      "invalid_auth": "The key is invalid or has been revoked.",
+      "subscription_required": "The API is part of the Smart Home plan.",
+      "rate_limited": "Too many requests, try again in a few minutes.",
+      "cannot_connect": "Cannot connect to spotovyradar.cz."
+    },
+    "abort": {
+      "already_configured": "This key is already configured.",
+      "reauth_successful": "The API key has been updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price_now": {
+        "name": "Electricity price now"
+      },
+      "spot_now": {
+        "name": "Spot price now"
+      },
+      "band_now": {
+        "name": "Price band now",
+        "state": {
+          "negative": "Negative",
+          "cheap": "Cheap",
+          "normal": "Normal",
+          "expensive": "Expensive"
+        }
+      },
+      "negative_probability": {
+        "name": "Negative price probability"
+      },
+      "cheapest_window_start": {
+        "name": "Cheapest 3 hours start"
+      },
+      "forecast_issued_at": {
+        "name": "Forecast issued"
+      }
+    },
+    "binary_sensor": {
+      "cheap_now": {
+        "name": "Cheap electricity now"
+      }
+    }
+  }
+}

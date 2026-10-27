@@ -1,0 +1,6 @@
+{
+  "name": "Spotový Radar",
+  "homeassistant": "2025.2.0",
+  "country": ["CZ"],
+  "render_readme": true
+}

@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotový Radar",
+        "description": "Vložte API klíč z {account_url} (tarif Smart Home).",
+        "data": {
+          "api_key": "API klíč"
+        },
+        "data_description": {
+          "api_key": "Začíná sr_live_. Ukáže se jen jednou při založení."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nový API klíč",
+        "description": "API klíč přestal platit. Založte nový na {account_url} a vložte ho sem.",
+        "data": {
+          "api_key": "API klíč"
+        }
+      }
+    },
+    "error": {
+      "invalid_format": "Klíč má tvar sr_live_…, zkopírujte ho znovu celý.",
+      "invalid_auth": "Klíč neplatí nebo byl zrušen.",
+      "subscription_required": "API je součástí tarifu Smart Home.",
+      "rate_limited": "Příliš mnoho dotazů, zkuste to za pár minut.",
+      "cannot_connect": "Nepodařilo se spojit se spotovyradar.cz."
+    },
+    "abort": {
+      "already_configured": "Tento klíč už je nastavený.",
+      "reauth_successful": "API klíč je vyměněný."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price_now": {
+        "name": "Cena elektřiny teď"
+      },
+      "spot_now": {
+        "name": "Spotová cena teď"
+      },
+      "band_now": {
+        "name": "Cenové pásmo teď",
+        "state": {
+          "negative": "Záporná",
+          "cheap": "Levná",
+          "normal": "Běžná",
+          "expensive": "Drahá"
+        }
+      },
+      "negative_probability": {
+        "name": "Pravděpodobnost záporné ceny"
+      },
+      "cheapest_window_start": {
+        "name": "Začátek nejlevnějších 3 hodin"
+      },
+      "forecast_issued_at": {
+        "name": "Vydání predikce"
+      }
+    },
+    "binary_sensor": {
+      "cheap_now": {
+        "name": "Levná elektřina teď"
+      }
+    }
+  }
+}
