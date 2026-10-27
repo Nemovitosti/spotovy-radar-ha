@@ -1,4 +1,4 @@
-"""Společné fixtures: odpověď API ve formátu `spotovyradar-forecast/1` a zapnuté vlastní integrace."""
+"""Společné fixtures: odpověď API `spotovyradar-forecast/1` a zapnuté vlastní integrace."""
 
 from __future__ import annotations
 
