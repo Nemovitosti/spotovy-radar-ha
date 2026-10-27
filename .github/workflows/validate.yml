@@ -22,3 +22,16 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.14"
+      - name: Testy s Home Assistantem
+        run: |
+          uv venv
+          uv pip install -r requirements_test.txt
+          uv run --no-project pytest -q

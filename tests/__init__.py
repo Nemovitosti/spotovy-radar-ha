@@ -1,0 +1,1 @@
+"""Testy integrace Spotový Radar."""
